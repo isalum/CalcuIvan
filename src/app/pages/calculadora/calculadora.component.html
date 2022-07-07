@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text text-center">Calculadora de Iván Salum</h1>
+        </div>
+
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-4">
+            <div class="mb-3">
+                <label class="form-label">Primer Número: </label>
+                <input type="number" class="form-control" (keyup)="cargarValorUno($any($event.target).value)">
+                <!--  <input type="number" class="form-control" [(ngModel)]="numeroUno"> -->
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Segundo Número: </label>
+                <input type="number" class="form-control" [(ngModel)]="numeroDos">
+            </div>
+            <div class="mb-3">
+                {{resultado}}
+
+            </div>
+            <button (click)="acciones('sumar')" type="button" class="btn-success">Sumar</button>
+            <button (click)="acciones('restar')" type="button" class="btn-danger">Restar</button>
+            <button (click)="acciones('por')" type="button" class="btn-success">Multiplicar</button>
+            <button (click)="acciones('dividido')" type="button" class="btn-danger">Dividir</button>
+        </div>
+
+    </div>
+</div>
